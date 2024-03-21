@@ -13,6 +13,10 @@ Roxygen: list(markdown = TRUE)
 LazyData: true
 Imports: 
   stats,
+  ramp.xde, 
+  ramp.library, 
+  ramp.work, 
+  ramp.dts,
   deSolve
 Suggests: 
   knitr,

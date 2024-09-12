@@ -1,9 +1,8 @@
-Package: ramp.malaria
+Package: ramp.models
 Title: Robust Analytics for Malaria Policy 
 Version: 0.1.0
 Authors@R: c(
-      person("David L.", "Smith", email = "smitdave@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-4367-3849")),
-      person("John M.", "Henry", email = "jmhenry2206@gmail.com", role = "aut", comment = c(ORCID = "0000-0001-8684-2003"))
+      person("David L.", "Smith", email = "smitdave@uw.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-4367-3849"))
     )
 Description: RAMP is a set of tools developed to support malaria policies. 
 License: GPL (>= 3) + file LICENSE

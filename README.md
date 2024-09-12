@@ -1,21 +1,63 @@
-# ramp.malaria <br><br> Robust Analytics for Malaria Policy
+# **`ramp.models`** - Models for **`ramp.xds`**
 
-Policy advice should be robust to uncertainty. 
-Robust Analytics for Malaria Policy (RAMP) was developed as a bespoke inferential system for malaria analytics; it's goal is to characterize, quantify, and propagate uncertainty. 
-RAMP software has implemented those principles in a stable computational form to facilitate the transformation of data into robust policy advice.
-This package, **`ramp.malaria`**, is designed as the entry point for six other RAMP R packages:
+## *Models for the epidemiology, spatial transmission dynamics, and control of malaria and other mosquito-borne pathogens*
 
-+ **xde** is a system for building and solving systems of differential equations describing malaria and other mosquito-transmitted pathogens (see
-[`ramp.xde`](dd-harp.github.io/ramp.xde)) 
+<!-- badges: start -->
+[![PLoS Computational Biology](https://img.shields.io/badge/doi%3A10.1371%2Fjournal.pcbi.1010684-cornflowerblue?style=for-the-badge&logoColor=cornflowerblue&label=PLoS%20Comp%20Bio&labelColor=slategrey&link=https%3A%2F%2Fjournals.plos.org%2Fploscompbiol%2Farticle%3Fid%3D10.1371%2Fjournal.pcbi.1010684)](https://doi.org/10.1371/journal.pcbi.1010684)
 
-+  **dts** is a system for building and solving systems of discrete time systems describing malaria and other mosquito-transmitted pathogens, including deterministic and stochastic difference equations (see [`ramp.dts`](dd-harp.github.io/ramp.dts))
+<!-- badges: end -->
 
-+ **library** holds a superset of algorithms and models that can be used to build models (see [`ramp.library`](dd-harp.github.io/ramp.library)) 
+## Install **`ramp.xds`** 
 
-+ **work** is a set of algorithms that can be used to analyze models [`ramp.work`](dd-harp.github.io/ramp.work)
+To install the latest version of [**`ramp.xds`**](https://dd-harp.github.io/ramp.xds/) from GitHub, run the following lines of code in an R session.
 
-+ **falciparum** takes a deep dive into human infections with *Plasmodium falciparum,* from exposure and infection through parasite densities and detection, immunity, disease, and infectiousness using a probabilistic approach [`ramp.falciparum`](dd-harp.github.io/ramp.falciparum)
+```
+library(devtools)
+devtools::install_github("dd-harp/ramp.xds")
+```
 
-+ **micro** is a set of tools for analyzing malaria and mosquito ecology microsimulation models [`ramp.micro`](dd-harp.github.io/ramp.micro/)
+Some models use modules found in [**`ramp.library`**](https://dd-harp.github.io/ramp.library/)
+
+```
+devtools::install_github("dd-harp/ramp.library")
+```
+
+Finally, install this package:
+
+```
+devtools::install_github("dd-harp/ramp.models")
+```
+
+Also see the vignette from [ramp.xds:: *Getting Started*](https://dd-harp.github.io/ramp.xds/articles/GettingStarted.html).
+
+## What is RAMP?
+
+**`ramp.xds`** was developed to support RAMP. 
+
+RAMP -- **R**obust **A**nalytics for **M**alaria **P**olicy -- describes bespoke inferential systems for malaria decision support and adaptive malaria control that go to great lengths to characterize, quantify, and propagate uncertainty. RAMP includes conventional analysis and simulation-based analytics.
+
+## What is **`ramp.xds`**?
+
+**`ramp.xds`** is an R software package that supports [nimble model building](https://dd-harp.github.io/ramp.xds/articles/Nimble.html) for simulation-based analytics and malaria research. The software was designed to help research scientists and policy analysts set up, analyze, solve, and use dynamical systems models describing the epidemiology, spatial transmission dynamics, and control of malaria and other mosquito-transmitted pathogens. The software also supports nimble model building and analysis for mosquito ecology, with the capability to handle forcing by weather and other exogenous variables. 
+
+**`ramp.xds`** has been designed to serve the needs of malaria programs, where mathematical models are used for decision support and adaptive malaria control in a defined geographical area. Mechanistic models that have been fitted to data describing malaria in a place provide a synthesis of *malaria intelligence.* These models can facilitate complex analysis, extending our innate mental capabilities. By characterizing and quantifying uncertainty, and then propagating the uncertainty through the analysis, simulation-based analytics serve as a platform for giving robust policy advice and for adaptive malaria control. As the needs of a malaria program changes, the models can be modified -- simplified or extended -- to serve the tasks at hand.
+
+**`ramp.xds`** was developed to apply malaria theory: it outputs standard, observable malaria metrics, and it easily solve dynamical systems, computes steady states and stable orbits, and computes the spatio-temporal vectorial capacity and the basic and adjusted reproductive numbers for malaria parasites. 
+
+## A Software Ecosystem for Robust, Simulation-based Analytics  
+
+**`ramp.xds`** is part of a suite of R packages developed to support RAMP: 
+
++ **`ramp.xds`** is the core computational engine for simulation-based analytics. It includes a basic set of models -- enough to design, verify, and demonstrate the basic features of modular software. 
+
++  [**`ramp.library`**](https://dd-harp.github.io/ramp.library/) is an extended library of stable code that has been tested and verified. It includes a large set of model families published in peer review that are not included in **`ramp.xds`** The ability to reuse code reduces the costs of replicating studies. Through this library, **`ramp.xds`** also supports nimble model building and analytics for other mosquito-borne pathogens. 
+
++ [**`ramp.work`**](https://dd-harp.github.io/ramp.work/) includes algorithms to apply the framework, include code to fit models to data and to do constrained optimization 
+
++ [**`ramp.models`**](https://dd-harp.github.io/ramp.models/) includes a large set of models illustrating capabilities of **`ramp.xds`** 
+
++ [**`ramp.falciparum`**](https://dd-harp.github.io/ramp.falciparum/) takes a deep dive into human infections with *Plasmodium falciparum,* from exposure and infection through parasite densities and detection, immunity, disease, and infectiousness using a probabilistic approach [`ramp.falciparum`](dd-harp.github.io/ramp.falciparum)
+
++ [**`ramp.micro`**](https://dd-harp.github.io/ramp.micro/) is a set of tools for analyzing malaria micro-epidemiology and mosquito micro-ecology 
 
 One of our goals in developing RAMP was to have a reusable code base, so for awhile, we became the mathematical equivalent of a chop shop (*i.e.* the kind that backstops car thieves). To get started, we wanted to develop a framework for nimble model building that was modular, flexible, and extensible.

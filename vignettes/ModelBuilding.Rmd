@@ -1,0 +1,13 @@
+---
+title: "Model Building with **`ramp.xds`**"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Model Building with **`ramp.xds`**}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# 
+
+The terms *model* and *model building* can mean a lot of different things. In naming this github repository, a *model* is a fully functioning **`ramp.xds`** object that can be solved and produce output. 
+

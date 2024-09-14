@@ -39,11 +39,30 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
 <li>
-  <a href="reference/index.html">Reference</a>
+      <a href="articles/ModelBuilding.html">Model Building with ramp.xds</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="reference/index.html">Functions</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/dd-harp/ramp.xds/" class="external-link">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -56,9 +75,8 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="rampmodels---models-for-rampxds">
-<strong><code>ramp.models</code></strong> - Models for <strong><code>ramp.xds</code></strong>
-<a class="anchor" aria-label="anchor" href="#rampmodels---models-for-rampxds"></a>
+<div class="page-header"><h1 id="rampmodels">
+<strong><code>ramp.models</code></strong><a class="anchor" aria-label="anchor" href="#rampmodels"></a>
 </h1></div>
 <div class="section level2">
 <h2 id="models-for-the-epidemiology-spatial-transmission-dynamics-and-control-of-malaria-and-other-mosquito-borne-pathogens">
@@ -72,14 +90,14 @@
 <h2 id="install-rampxds">Install <strong><code>ramp.xds</code></strong>
 <a class="anchor" aria-label="anchor" href="#install-rampxds"></a>
 </h2>
-<p>To install the latest version of <a href="https://dd-harp.github.io/ramp.xds/" class="external-link"><strong><code>ramp.xds</code></strong></a> from GitHub, run the following lines of code in an R session.</p>
+<p>To install the latest version of <a href="https://dd-harp.github.io/ramp.xds/"><strong><code>ramp.xds</code></strong></a> from GitHub, run the following lines of code in an R session.</p>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"dd-harp/ramp.xds"</span><span class="op">)</span></span></code></pre>
 <p>Some models use modules found in <a href="https://dd-harp.github.io/ramp.library/" class="external-link"><strong><code>ramp.library</code></strong></a></p>
 <pre><code><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"dd-harp/ramp.library"</span><span class="op">)</span></span></code></pre>
 <p>Finally, install this package:</p>
 <pre><code><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"dd-harp/ramp.models"</span><span class="op">)</span></span></code></pre>
-<p>Also see the vignette from <a href="https://dd-harp.github.io/ramp.xds/articles/GettingStarted.html" class="external-link">ramp.xds:: <em>Getting Started</em></a>.</p>
+<p>Also see the vignette from <a href="https://dd-harp.github.io/ramp.xds/articles/GettingStarted.html">ramp.xds:: <em>Getting Started</em></a>.</p>
 </div>
 <div class="section level2">
 <h2 id="what-is-ramp">What is RAMP?<a class="anchor" aria-label="anchor" href="#what-is-ramp"></a>
@@ -88,18 +106,11 @@
 <p>RAMP – <strong>R</strong>obust <strong>A</strong>nalytics for <strong>M</strong>alaria <strong>P</strong>olicy – describes bespoke inferential systems for malaria decision support and adaptive malaria control that go to great lengths to characterize, quantify, and propagate uncertainty. RAMP includes conventional analysis and simulation-based analytics.</p>
 </div>
 <div class="section level2">
-<h2 id="what-is-rampxds">What is <strong><code>ramp.xds</code></strong>?<a class="anchor" aria-label="anchor" href="#what-is-rampxds"></a>
+<h2 id="a-software-ecosystem-for-ramp-and-malaria-research">A Software Ecosystem for RAMP and Malaria Research<a class="anchor" aria-label="anchor" href="#a-software-ecosystem-for-ramp-and-malaria-research"></a>
 </h2>
-<p><strong><code>ramp.xds</code></strong> is an R software package that supports <a href="https://dd-harp.github.io/ramp.xds/articles/Nimble.html" class="external-link">nimble model building</a> for simulation-based analytics and malaria research. The software was designed to help research scientists and policy analysts set up, analyze, solve, and use dynamical systems models describing the epidemiology, spatial transmission dynamics, and control of malaria and other mosquito-transmitted pathogens. The software also supports nimble model building and analysis for mosquito ecology, with the capability to handle forcing by weather and other exogenous variables.</p>
-<p><strong><code>ramp.xds</code></strong> has been designed to serve the needs of malaria programs, where mathematical models are used for decision support and adaptive malaria control in a defined geographical area. Mechanistic models that have been fitted to data describing malaria in a place provide a synthesis of <em>malaria intelligence.</em> These models can facilitate complex analysis, extending our innate mental capabilities. By characterizing and quantifying uncertainty, and then propagating the uncertainty through the analysis, simulation-based analytics serve as a platform for giving robust policy advice and for adaptive malaria control. As the needs of a malaria program changes, the models can be modified – simplified or extended – to serve the tasks at hand.</p>
-<p><strong><code>ramp.xds</code></strong> was developed to apply malaria theory: it outputs standard, observable malaria metrics, and it easily solve dynamical systems, computes steady states and stable orbits, and computes the spatio-temporal vectorial capacity and the basic and adjusted reproductive numbers for malaria parasites.</p>
-</div>
-<div class="section level2">
-<h2 id="a-software-ecosystem-for-robust-simulation-based-analytics">A Software Ecosystem for Robust, Simulation-based Analytics<a class="anchor" aria-label="anchor" href="#a-software-ecosystem-for-robust-simulation-based-analytics"></a>
-</h2>
-<p><strong><code>ramp.xds</code></strong> is part of a suite of R packages developed to support RAMP:</p>
+<p><strong><code>ramp.models</code></strong> is part of a suite of R packages developed to support RAMP:</p>
 <ul>
-<li><p><strong><code>ramp.xds</code></strong> is the core computational engine for simulation-based analytics. It includes a basic set of models – enough to design, verify, and demonstrate the basic features of modular software.</p></li>
+<li><p><a href="https://dd-harp.github.io/ramp.xds/"><strong><code>ramp.xds</code></strong></a> is the core computational engine for simulation-based analytics. It includes a basic set of models – enough to design, verify, and demonstrate the basic features of modular software.</p></li>
 <li><p><a href="https://dd-harp.github.io/ramp.library/" class="external-link"><strong><code>ramp.library</code></strong></a> is an extended library of stable code that has been tested and verified. It includes a large set of model families published in peer review that are not included in <strong><code>ramp.xds</code></strong> The ability to reuse code reduces the costs of replicating studies. Through this library, <strong><code>ramp.xds</code></strong> also supports nimble model building and analytics for other mosquito-borne pathogens.</p></li>
 <li><p><a href="https://dd-harp.github.io/ramp.work/" class="external-link"><strong><code>ramp.work</code></strong></a> includes algorithms to apply the framework, include code to fit models to data and to do constrained optimization</p></li>
 <li><p><a href="https://dd-harp.github.io/ramp.models/" class="external-link"><strong><code>ramp.models</code></strong></a> includes a large set of models illustrating capabilities of <strong><code>ramp.xds</code></strong></p></li>

@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  ModelBuilding: ModelBuilding.html
+last_built: 2024-09-18T19:55Z
+urls:
+  reference: https://dd-harp.github.io/ramp.xds/reference
+  article: https://dd-harp.github.io/ramp.xds/articles

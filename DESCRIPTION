@@ -10,6 +10,7 @@ Encoding: UTF-8
 RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 LazyData: true
+Remotes: github::dd-harp/ramp.xds
 Imports: 
   ramp.xds 
 Suggests: 

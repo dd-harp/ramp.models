@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://dd-harp.github.io/ramp.xds/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://dd-harp.github.io/ramp.xds/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://dd-harp.github.io/ramp.xds/articles/ModelBuilding.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://dd-harp.github.io/ramp.xds/articles/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://dd-harp.github.io/ramp.xds/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://dd-harp.github.io/ramp.xds/index.html</loc>
+  </url>
+  <url>
+    <loc>https://dd-harp.github.io/ramp.xds/reference/build_indoor_spaces.html</loc>
+  </url>
+  <url>
+    <loc>https://dd-harp.github.io/ramp.xds/reference/index.html</loc>
   </url>
 </urlset>

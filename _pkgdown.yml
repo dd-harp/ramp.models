@@ -1,0 +1,30 @@
+url: https://dd-harp.github.io/ramp.xds
+navbar:
+  left:
+  - text: Articles
+    menu:
+    - text: Model Building with ramp.xds
+      href: articles/ModelBuilding.html
+  - text: Functions
+    href: reference/index.html
+  right:
+  - icon: fa-github
+    href: https://github.com/dd-harp/ramp.xds/
+home:
+  sidebar:
+    structure:
+    - links
+    - license
+    - community
+    - citation
+    - authors
+    - dev
+reference:
+- title: No methods yet 
+  desc: |
+    Methods do not exist 
+- subtitle: No subclass exists 
+  desc: |
+    No methods to set subclass 
+  contents:
+  - build_indoor_spaces

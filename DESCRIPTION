@@ -7,20 +7,14 @@ Authors@R: c(
 Description: RAMP is a set of tools developed to support malaria policies. 
 License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Roxygen: list(markdown = TRUE)
 LazyData: true
+Remotes: github::dd-harp/ramp.xds
 Imports: 
-  stats,
-  ramp.xde, 
-  ramp.library, 
-  ramp.work, 
-  ramp.dts,
-  deSolve
+  ramp.xds 
 Suggests: 
   knitr,
-  graphics,
-  viridis,
   viridisLite
 VignetteBuilder: knitr
-URL: https://dd-harp.github.io/ramp.malaria/
+URL: https://dd-harp.github.io/ramp.models/
